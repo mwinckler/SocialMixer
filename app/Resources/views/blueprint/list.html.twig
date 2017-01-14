@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+
 {% block body %}
     {% for blueprint in blueprints %}
         <li><a href="{{ path('show_blueprint', {'id': blueprint.id}) }}">{{ blueprint.name }}</a></li>

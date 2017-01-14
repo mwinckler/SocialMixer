@@ -51,7 +51,7 @@ class BlueprintsController extends Controller {
 		$form = $this->createFormBuilder($blueprint)
 			->add('name', TextType::class)
 			->add('groupSize', IntegerType::class)
-            ->add('roles', TextType::class)
+            ->add('roles', TextType::class, array('required' => false))
             ->add('save', SubmitType::class, array('label' => 'Create blueprint'))
             ->getForm();
 
@@ -75,7 +75,7 @@ class BlueprintsController extends Controller {
         $form = $this->createFormBuilder($blueprint)
             ->add('name', TextType::class)
             ->add('groupSize', IntegerType::class)
-            ->add('roles', TextType::class)
+            ->add('roles', TextType::class, array('required' => false))
             ->add('save', SubmitType::class, array('label' => 'Update blueprint'))
             ->getForm();
 
