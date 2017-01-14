@@ -1,0 +1,9 @@
+{% block body %}
+    <h2>{{ blueprint.getName() }}</h2>
+    <p>Properties:</p>
+    <ul>
+        <li><strong>Group size:</strong> {{ blueprint.getGroupSize() }}</li>
+        <li><strong>Roles:</strong> {{ blueprint.getRoles() }}</li>
+    </ul>
+    <p><a href="{{ path('edit_blueprint', { 'id': blueprint.id }) }}">Edit</a></p>
+{% endblock %}
